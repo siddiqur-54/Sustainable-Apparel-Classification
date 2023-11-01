@@ -1,0 +1,109 @@
+Model's Architecture Summary:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ reshape (Reshape)           (None, 28, 28, 1)         0         
+                                                                 
+ conv2d (Conv2D)             (None, 26, 26, 32)        320       
+                                                                 
+ batch_normalization (Batch  (None, 26, 26, 32)        128       
+ Normalization)                                                  
+                                                                 
+ max_pooling2d (MaxPooling2  (None, 13, 13, 32)        0         
+ D)                                                              
+                                                                 
+ conv2d_1 (Conv2D)           (None, 11, 11, 64)        18496     
+                                                                 
+ batch_normalization_1 (Bat  (None, 11, 11, 64)        256       
+ chNormalization)                                                
+                                                                 
+ max_pooling2d_1 (MaxPoolin  (None, 5, 5, 64)          0         
+ g2D)                                                            
+                                                                 
+ flatten (Flatten)           (None, 1600)              0         
+                                                                 
+ dense (Dense)               (None, 128)               204928    
+                                                                 
+ dropout (Dropout)           (None, 128)               0         
+                                                                 
+ dense_1 (Dense)             (None, 10)                1290      
+                                                                 
+=================================================================
+Total params: 225418 (880.54 KB)
+Trainable params: 225226 (879.79 KB)
+Non-trainable params: 192 (768.00 Byte)
+_________________________________________________________________
+
+Evaluation Metric(s) Obtained:
+Classification Accuracy: 0.9157
+
+Confusion Matrix:
+904 1 6 13 0 1 72 0 3 0
+3 982 0 9 1 1 4 0 0 0
+33 0 834 10 49 1 71 0 2 0
+22 4 2 934 19 0 18 0 1 0
+1 0 27 26 876 0 70 0 0 0
+0 0 0 0 0 990 0 5 1 4
+139 1 35 26 41 0 752 0 6 0
+0 0 0 0 0 21 0 920 0 59
+6 1 0 1 1 2 6 0 981 2
+0 0 0 0 0 3 0 13 0 984
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.82      0.90      0.86      1000
+           1       0.99      0.98      0.99      1000
+           2       0.92      0.83      0.88      1000
+           3       0.92      0.93      0.93      1000
+           4       0.89      0.88      0.88      1000
+           5       0.97      0.99      0.98      1000
+           6       0.76      0.75      0.75      1000
+           7       0.98      0.92      0.95      1000
+           8       0.99      0.98      0.98      1000
+           9       0.94      0.98      0.96      1000
+
+    accuracy                           0.92     10000
+   macro avg       0.92      0.92      0.92     10000
+weighted avg       0.92      0.92      0.92     10000
+
+
+Accuracy before human-in-the-loop intervention: 0.9157
+
+Accuracy after human-in-the-loop intervention: 0.9712
+
+
+Additional Insights or Observations:
+
+Without Human Intervention:
+Class 0: Accuracy 0.9040
+Class 1: Accuracy 0.9820
+Class 2: Accuracy 0.8340
+Class 3: Accuracy 0.9340
+Class 4: Accuracy 0.8760
+Class 5: Accuracy 0.9900
+Class 6: Accuracy 0.7520
+Class 7: Accuracy 0.9200
+Class 8: Accuracy 0.9810
+Class 9: Accuracy 0.9840
+
+Class with Maximum Accuracy: Class 5, Accuracy 0.99
+Class with Minimum Accuracy: Class 6, Accuracy 0.75
+
+With Human Intervention:
+Class 0: Accuracy 0.9920
+Class 1: Accuracy 0.9920
+Class 2: Accuracy 0.9920
+Class 3: Accuracy 0.9920
+Class 4: Accuracy 0.9920
+Class 5: Accuracy 0.9920
+Class 6: Accuracy 0.9920
+Class 7: Accuracy 0.9920
+Class 8: Accuracy 0.9920
+Class 9: Accuracy 0.9920
+
+Class with Maximum Accuracy: Class 0, Accuracy 0.99
+Class with Minimum Accuracy: Class 0, Accuracy 0.99
+
+Write additional insights or observations here.
