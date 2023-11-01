@@ -23,17 +23,18 @@ cd Sustainable-Apparel-Classification
 ```
 ### II. Create a virtual environment (optional but recommended):
 ```bash
-python -m venv venv
+python -m venv myvenv
 ```
+Here myvenv is the name of the  virtual environement. You can choose any name according to your project.
 
 ### III. Activate the virtual environment:
 __For windows:__
 ```bash
-venv\Scripts\activate
+myvenv\Scripts\activate
 ```
 __For Linux/macOS:__
 ```bash
-source venv/bin/activate
+source myvenv/bin/activate
 ```
 ### IV. Install project dependencies:
 ```bash
