@@ -2,6 +2,14 @@ import matplotlib.pyplot as plt
 
 def data_distribution(train_set,test_set,x_train):
 
+    # Percentage distribution of training and testing data
+    data_sizes = [len(train_set), len(test_set)]
+    data_labels = ['Training Data', 'Testing Data']
+    
+    plt.figure(figsize=(6, 6))
+    plt.pie(data_sizes, labels=data_labels, autopct='%1.1f%%', startangle=90, colors=['skyblue', 'lightgreen'])
+    plt.title('Data Distribution: Training vs Testing')
+
     # Distribution of classes in the training dataset
     plt.figure(figsize=(8, 6))
     train_set['label'].value_counts().plot(kind='bar', color='skyblue')
