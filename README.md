@@ -1,19 +1,19 @@
 ## 1. Overview
 
-This project focuses on the identification and classification of sustainable apparel products using the Fashion MNIST dataset. The goal is to develop an AI solution aligned with NITEX's vision, emphasizing sustainable fashion.
+This project focuses on the identification and classification of sustainable apparel products using the Fashion MNIST dataset. The goal is to develop an AI solution aligned with NITEX's vision, emphasizing sustainable fashion. NITEX's vision underscores the transformative potential of sustainable fashion, emphasizing the fusion of style and ethics. By harnessing the capabilities of AI, this project aspires to enhance the fashion landscape, driving positive change and inspiring a more sustainable approach to clothing. Through a harmonious blend of technology and environmental consciousness, we embark on a journey towards a future where fashion is not only a statement of style but also a testament to our commitment to the planet.
 
 
 
 ## 2. Project Structure
-- "__evaluate_model.py__": This is the main file of the Project.
-- "__data_process.py__": This is for the data preprocessing.
-- "__data_visualize.py__": This is for the visualization of the dataset sample.
-- "__data_analyze__.py": This is for analyzing the dataset.
-- "__model_define.py__": This is for creating a custom model.
-- "__model_execute.py__": This is for executing the model.
-- "__human_interact.py__": This is for interacting with the project prediction manually.
-- "__output.txt__": This file contains the exectuion results of the model
-- "__requirements.txt__": This file contains all the dependencies of the project
+- __evaluate_model.py:__ Main script responsible for evaluating the trained machine learning or AI model using the provided dataset folder. It generates an output.txt file containing the model's architecture summary, evaluation metrics, and additional insights or observations.
+- __data_process.py:__ Handles preprocessing tasks, including data cleaning, feature scaling, and transformation, ensuring the data is in the appropriate format for training the model.
+- __data_visualize.py:__ Focuses on visualizing dataset samples, providing insights into data characteristics through graphs, bars or other visual representations.
+- __data_analyze.py:__ Analyzes the dataset in-depth, exploring statistical properties, class distributions, and potential feature correlations, aiding in understanding the dataset's structure.
+- __model_define.py:__ Defines the machine learning or AI model architecture, specifying layers, activation functions, and connections between neurons, forming the foundation of the predictive model.
+- __model_execute.py:__ Executes the defined model, including the training process and evaluation on the test dataset, providing accuracy metrics and performance evaluation.
+- __human_interact.py:__ Allows manual interaction with the project predictions, facilitating human expertise integration to improve accuracy.
+- __output.txt:__ Contains the execution results of the model, including model architecture summary, evaluation metrics, and additional insights or observations.
+- __requirements.txt:__ Lists all the project dependencies, ensuring consistent environment setup for reproducibility.
 ## 3. Getting Started
 
 ### I. Clone the repository to your local machine:
@@ -25,7 +25,7 @@ cd Sustainable-Apparel-Classification
 ```bash
 python -m venv myvenv
 ```
-Here myvenv is the name of the  virtual environement. You can choose any name according to your project.
+Here myvenv is the name of the virtual environment. You can choose any name according to your project.
 
 ### III. Activate the virtual environment:
 __For windows:__
@@ -55,7 +55,7 @@ python evaluate_model.py "C:\Users\HP\Documents\AI Task\Fashion MNIST"
 This will generate an output.txt file with model details and evaluation metrics.
 ## 5. About Dataset
 ### 5.1 Context
-Fashion-MNIST is a dataset of Zalando's article images—consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes.
+Fashion-MNIST is a dataset of Zalando's article images—consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes. Zalando intends Fashion-MNIST to serve as a direct drop-in replacement for the original MNIST dataset for benchmarking machine learning algorithms. It shares the same image size and structure of training and testing splits.
 
 ### 5.2 Content
 Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pixels in total. Each pixel has a single pixel-value associated with it, indicating the lightness or darkness of that pixel, with higher numbers meaning darker. This pixel-value is an integer between 0 and 255. The training and test data sets have 785 columns.
@@ -78,23 +78,25 @@ Each training and test example is assigned to one of the following labels:
 - 9    Ankle boot
 
 ### 5.4 Acknowledgements
-- Original dataset was downloaded from https://github.com/zalandoresearch/fashion-mnist
+- The dataset has been downloaded from https://www.kaggle.com/datasets/zalando-research/fashionmnist
+
 ## 6. About Model
+A Convolutional Neural Network (CNN) has been defined for this project. The Convolutional Neural Network (CNN) is a machine learning model, specifically a type of deep learning model. CNNs are a class of models that have proven to be highly effective for image recognition and classification tasks. CNNs are particularly effective in analyzing visual data due to their ability to capture spatial patterns. This model was chosen for its proven effectiveness in image classification tasks, making it well-suited for sustainable identification and classification of apparel products from the Fashion MNIST dataset
 ### 6.1 Model Architecture
 
 The neural network model used for this project is a Convolutional Neural Network (CNN) designed for image classification tasks. Here's a breakdown of the model architecture:
   
-  1. __Reshape Layer:__ Reshapes the input into (28, 28, 1) to match the image dimensions.
-  2. __Convolutional Layer 1:__ 32 filters of size (3, 3) with ReLU activation.
-  3. __Batch Normalization:__ Normalizes the activations of the previous layer.
-  4. __MaxPooling:__ Pooling layer with pool size (2, 2) to reduce spatial dimensions.
-  5. __Convolutional Layer 2:__ 64 filters of size (3, 3) with ReLU activation.
-  6. __Batch Normalization:__ Normalizes the activations of the previous layer.
-  7. __MaxPooling:__ Pooling layer with pool size (2, 2) to reduce spatial dimensions.
-  8. __Flatten Layer:__ Flattens the output from the previous layer.
-  9. __Dense Layer:__ 128 units with ReLU activation.
-  10. __Dropout Layer:__ Dropout layer with a dropout rate of 0.5 to prevent overfitting.
-  11. __Output Layer:__ 10 units with softmax activation, representing the 10 classes in Fashion MNIST dataset.
+  1. __Reshape Layer:__ This layer reshapes the input data into a format suitable for processing by subsequent layers. In this case, it transforms the input into a 3D tensor with dimensions (28, 28, 1), matching the image dimensions of the Fashion MNIST dataset.
+  2. __Convolutional Layer 1:__ This layer applies 32 convolutional filters of size (3, 3) to the input data. These filters scan the input images, learning to recognize various features using the ReLU activation function, which introduces non-linearity to the model.
+  3. __Batch Normalization:__ After the convolutional layer, batch normalization is applied. It normalizes the activations of the previous layer, improving the stability and speed of training by ensuring that inputs have similar scales.
+  4. __MaxPooling:__ This layer performs max pooling with a pool size of (2, 2). Max pooling reduces the spatial dimensions of the data, retaining the most important features while reducing computational complexity.
+  5. __Convolutional Layer 2:__ Similar to the first convolutional layer, this layer applies 64 filters of size (3, 3) to the input. It further learns intricate patterns and features from the data.
+  6. __Batch Normalization:__ Batch normalization is applied again after the second convolutional layer to maintain the stability of the model during training.
+  7. __MaxPooling:__ Another max pooling layer is used to further reduce the spatial dimensions of the data before passing it to the dense layers.
+  8. __Flatten Layer:__ This layer flattens the output from the previous layer into a 1D vector. It prepares the data for processing by the densely connected layers.
+  9. __Dense Layer:__ A densely connected layer with 128 units and ReLU activation follows the flattened layer. This layer learns complex patterns and representations from the flattened input.
+  10. __Dropout Layer:__ Dropout is applied to this layer with a dropout rate of 0.5, meaning during training, 50% of the neurons in this layer will be randomly set to zero. Dropout helps prevent overfitting by introducing noise during training, forcing the model to learn more robust features.
+  11. __Output Layer:__ The final layer consists of 10 units, each representing one class in the Fashion MNIST dataset. The softmax activation function is used to convert the raw scores into probabilities, determining the class prediction for the input image.
 
 This architecture allows the model to learn hierarchical features from the input images and make predictions for the respective apparel classes.
 
@@ -129,3 +131,7 @@ III. __Recall:__ Recall, often referred to as sensitivity, measures how well the
 
 
 IV. __F1-Score__: The F1 score serves as a harmonious equilibrium between the aspects of recall and precision. It becomes particularly beneficial when the need arises to mitigate both false positives and false negatives. Functioning as a comprehensive indicator of a model’s classification performance, the F1 score considers the interplay between precision and recall. Calculated as the harmonic mean of these two metrics, the F1 score encapsulates the overall performance of the model in classification tasks.
+## Screenshots
+
+![App Screenshot](https://github.com/siddiqur-54/Sustainable-Apparel-Classification/blob/master/snapshots/accuracy%20and%20loss.PNG)
+
