@@ -131,23 +131,29 @@ III. __Recall:__ Recall, often referred to as sensitivity, measures how well the
 
 
 IV. __F1-Score__: The F1 score serves as a harmonious equilibrium between the aspects of recall and precision. It becomes particularly beneficial when the need arises to mitigate both false positives and false negatives. Functioning as a comprehensive indicator of a model’s classification performance, the F1 score considers the interplay between precision and recall. Calculated as the harmonic mean of these two metrics, the F1 score encapsulates the overall performance of the model in classification tasks.
-## 8. Output Snapshots
+## 8. Figures & Screenshots
 ### 8.1 Dataset Samples
 ![App Screenshot](https://github.com/siddiqur-54/Sustainable-Apparel-Classification/blob/master/snapshots/sample%20images.PNG)
 
-### 8.2 Distribution of Training Set Classes
+### 8.2 Training vs Testing Distribution
+![App Screenshot](https://github.com/siddiqur-54/Sustainable-Apparel-Classification/blob/master/snapshots/training%20vs%20testing%20distribution.PNG)
+
+### 8.3 Distribution of Training Set Classes
 ![App Screenshot](https://github.com/siddiqur-54/Sustainable-Apparel-Classification/blob/master/snapshots/training%20distribution.PNG)
 
-### 8.3 Distribution of Testing Set Classes
+### 8.4 Distribution of Testing Set Classes
 ![App Screenshot](https://github.com/siddiqur-54/Sustainable-Apparel-Classification/blob/master/snapshots/testing%20distribution.PNG)
 
-### 8.4 Distribution of Sample Image Pixel Values
+### 8.5 Distribution of Sample Image Pixel Values
 ![App Screenshot](https://github.com/siddiqur-54/Sustainable-Apparel-Classification/blob/master/snapshots/pixel%20distribution.PNG)
 
-### 8.4 Accuracy and Loss of Training and Validation 
+### 8.6 Model Architeture
+![App Screenshot](https://github.com/siddiqur-54/Sustainable-Apparel-Classification/blob/master/snapshots/model%20architecture.png)
+
+### 8.7 Accuracy and Loss of Training and Validation 
 ![App Screenshot](https://github.com/siddiqur-54/Sustainable-Apparel-Classification/blob/master/snapshots/accuracy%20and%20loss.PNG)
 
-### 8.5 Confusion Matrix
+### 8.8 Confusion Matrix
 ![App Screenshot](https://github.com/siddiqur-54/Sustainable-Apparel-Classification/blob/master/snapshots/confusion%20matrix.PNG)
 
 
