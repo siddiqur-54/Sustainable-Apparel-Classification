@@ -1,6 +1,6 @@
 ## 1. Introduction
 
-This project focuses on the identification and classification of sustainable apparel products using the Fashion MNIST dataset. The goal is to develop an AI solution aligned with NITEX's vision, emphasizing sustainable fashion. NITEX's vision underscores the transformative potential of sustainable fashion, emphasizing the fusion of style and ethics. By harnessing the capabilities of AI, this project aspires to enhance the fashion landscape, drive positive change, and inspire a more sustainable approach to clothing. Through a harmonious blend of technology and environmental consciousness, we embark on a journey towards a future where fashion is not only a statement of style but also a testament to our commitment to the planet.
+This project focuses on the identification and classification of sustainable apparel products using the Fashion MNIST dataset. The goal is to develop an AI solution aligned with emphasizing sustainable fashion. Our vision underscores the transformative potential of sustainable fashion, emphasizing the fusion of style and ethics. By harnessing the capabilities of AI, this project aspires to enhance the fashion landscape, drive positive change, and inspire a more sustainable approach to clothing. Through a harmonious blend of technology and environmental consciousness, we embark on a journey towards a future where fashion is not only a statement of style but also a testament to our commitment to the planet.
 
 
 
